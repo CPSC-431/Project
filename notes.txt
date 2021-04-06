@@ -5,4 +5,4 @@ Reddit 50/50 Bootleg:
 - Database access
 - Access Control
 - Input Validation
-- Email/Session Handling
+- Session Handling
