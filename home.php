@@ -60,7 +60,8 @@
     ">
         <h1 class="mb-3">Welcome to 50/50: A Game of Chance</h1>
         <h4 class="mb-3">Expect the Unexpected</h4>
-        <a class="btn btn-primary" href="upload.php" role="button">Create a Post</a>
+        <a class="btn btn-primary" href="upload.html" role="button">Create a Post</a>
+        <a class="btn btn-primary" href="upload.php" role="button">Check out Posts</a>
     </div>
 
 
