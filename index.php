@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    include 'connection.php'
+    include 'connection.php' /*used for testing while Emiliano was completing signup/login/signout pages*/
 ?>
 <html lang="en" dir="ltr">
 <head>
