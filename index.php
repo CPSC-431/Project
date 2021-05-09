@@ -1,24 +1,22 @@
-<?php include ‘connection.php’ ?>
 <!DOCTYPE html>
-<html>
+<?php
+    include 'connection.php'
+?>
+<html lang="en" dir="ltr">
 <head>
-<meta charset=”UTF-8″>
-<title>ITSOURCECODE Simple Forum</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Main Page: 50/50</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 </head>
 <body>
-<h3>ITSOURCECODE Simple Forum in PHP/MYSQL</h3>
-<a href=”add-board.php”>Add New Topic Board</a><br>
-<?php
-$boards = $mysqli->query(“SELECT * FROM boards”);
-while ($board_data = $boards->fetch_assoc()) {
-$threads = $mysqli->query(“SELECT * FROM threads WHERE board_id = “.$board_data[‘board_id’].””);
-?>
-<br>
-<b>#<?php echo $board_data[‘board_id’] ?></b> <a href=”view-board.php?board_id=<?php echo $board_data[‘board_id’] ?>”><?php echo $board_data[‘board_name’] ?></a> [<b><?php echo $threads->num_rows ?></b> Topics]
-<?php }
-if ($boards->num_rows == null) {
-echo ‘<br>no topic board created yet’;
-}
-?>
+    <h1>Welcome to 50/50: Explore or create your own forum</h1>
+    <a href=”add-board.php”>Add New Topic Board</a><br>
 </body>
+
 </html>
