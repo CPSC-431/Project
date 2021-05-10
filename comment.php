@@ -1,0 +1,18 @@
+<?php
+include("dbconnect.php");
+include("sessions.php");
+
+
+if (isset($_POST['comment'])){
+$comment = $_POST['content'];
+
+mysqli_query($conn,"insert into comment (content,user_id,post_id) values ('$comment','$user_id','$content')") or die (mysqli_error());
+
+?>
+<script>
+window.location = 'threadlist.php';
+</script>
+
+<?php
+}
+?>
