@@ -1,14 +1,23 @@
 <?php
+		include('dbconnect.php');
+		session_start();
+		$username = $_POST['username'];
+		$password = $_POST['password'];
 
-?>
+		$query = mysqli_query($conn,"SELECT * FROM user WHERE username='$username' AND password='$password'")or die(mysqli_error());
+		$count = mysqli_num_rows($query);
+		$row = mysqli_fetch_array($query);
 
-<section class = "signup-form">
-    <h2>Log in</h2>
-    <form action="includes/login.inc.php" method = "post">
-        <input type="text" name = "text" placeholder="Username/Email...">
-        <input type="password" name = "pwd" placeholder="Password...">
-        <button type="submit" name="submit">Log in</button>
-    </form>
 
-</section>
-
+		if ($count > 0){
+		
+		$_SESSION['id']=$row['user_id'];
+		
+		echo 'true';
+		
+		
+		 }else{ 
+		echo 'false';
+		}	
+				
+		?>
