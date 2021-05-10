@@ -1,1 +1,1 @@
-# CPSC 431 Project - Reddit 50/50
+# CPSC 431 Project - Fake Reddit Forum
