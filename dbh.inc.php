@@ -1,5 +1,7 @@
 <?php
 
+// testing for signup/login page separately
+
 $serverName = "mariadb";
 $dbUsername = "cs431s20";
 $dbPassword = "ohShier8";
